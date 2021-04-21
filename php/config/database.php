@@ -22,7 +22,7 @@ $DB_DROP		= "DROP DATABASE ";
 
 $DB_TABLE_PRODUCTS	= 
 	"CREATE TABLE IF NOT EXISTS products (
-		`id_products`		INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+		`id_product`		INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
 		`title`   			VARCHAR(255) NOT NULL,
 		`description`		TEXT COLLATE utf8mb4_general_ci NOT NULL,
 		`image_product_url`	VARCHAR(255) NOT NULL,
@@ -34,8 +34,8 @@ $DB_TABLE_COMMENTS	=
 	"CREATE TABLE IF NOT EXISTS comments
 	(
 		`id_comment`   		INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-		`id_author`			INT NOT NULL,
-		`id_products`		INT NOT NULL,
+		`author_name`		VARCHAR(255) NOT NULL,
+		`id_product`		INT NOT NULL,
 		`comment`			TEXT COLLATE utf8mb4_general_ci NOT NULL,
 		`time_comment`		DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
 	);";
