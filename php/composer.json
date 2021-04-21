@@ -1,9 +1,8 @@
 {
     "name": "blissim/app",
-    "description": "Technical test for Blissim",
     "autoload": {
         "psr-4": {
-            "App\\": "php/app"
+            "App\\": "app"
         }
     },
     "require": {
