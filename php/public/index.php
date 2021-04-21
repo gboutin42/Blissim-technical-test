@@ -1,5 +1,5 @@
 <?php
-require '../../vendor/autoload.php';
+require '../vendor/autoload.php';
 use App\Controllers\ProductsController;
 
 $router = new AltoRouter();
@@ -17,12 +17,16 @@ $router->map('GET', '/products', function () {
 	new ProductsController();
 });
 
+$router->map('GET', '/product-[i:id]', function ($id) {
+	new ProductsController($id);
+});
+
 
 $match = $router->match();
 if ($match != false)
 {
 	require_once("../app/Views/Inc/header.php");
-	$match["target"]();
+	$match["target"]($match['params']['id'] ?? '');
 	require_once("../app/Views/Inc/footer.php");
 }
 else
