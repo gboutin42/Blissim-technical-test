@@ -4,4 +4,4 @@
 </body>
 </html>
 
-<script src="js/global.js"></script>
+<script src="resources/js/global.js"></script>
