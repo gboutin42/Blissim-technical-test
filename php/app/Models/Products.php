@@ -14,20 +14,22 @@ class Products
 			return "Wrong Api Url, please check the Api url.";
 	}
 
-	private function getProductsByApi($url)
+	public static function getProductsByApi($url)
 	{
 		if ($response = file_get_contents($url))
 			return json_decode($response);
 		return "No products found.";
 	}
 	
-	public function getProduct($id)
+	public static function getProductById($url, $id)
 	{
-		$products = $this->getProductsByApi('https://fakestoreapi.com/products');
+		$products = self::getProductsByApi($url);
 		foreach ($products as $product)
 		{
 			if ($product->id == $id)
+			{
 				return $product;
+			}
 		}
 		return "Product not found.";
 	}
