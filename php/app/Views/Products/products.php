@@ -11,5 +11,3 @@
         </div>
     <?php } ?>
 </div>
-
-<script src="resources/js/products.js"></script>
