@@ -5,3 +5,5 @@
 </html>
 
 <script src="resources/js/global.js"></script>
+<script src="resources/js/products.js"></script>
+<script src="resources/js/comments.js"></script>
