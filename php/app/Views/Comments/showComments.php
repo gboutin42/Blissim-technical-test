@@ -1,2 +1,2 @@
-<section id="showComments" class="hidden pr-12">
+<section id="showComments" class="hidden w-3/6">
 </section>
