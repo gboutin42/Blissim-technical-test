@@ -15,8 +15,8 @@
 				</div>
 		</div>
 		<div class="flex flex-row">
-			<?php require_once(dirname(dirname(__FILE__)) .  "/Comments/showComments.php" )?>
-			<?php require_once(dirname(dirname(__FILE__)) .  "/Comments/addComments.php" )?>
+			<?php require_once(dirname(dirname(__FILE__)) . "/Comments/showComments.php" )?>
+			<?php require_once(dirname(dirname(__FILE__)) . "/Comments/addComments.php" )?>
 		</div>
 	</div>
 <?php } else {?>

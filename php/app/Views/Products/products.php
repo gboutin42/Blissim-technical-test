@@ -6,7 +6,7 @@
                 </div>
                 <div>
                     <h2 class="text-2xl bg-blue-400"><?= $product->title ?></h2>
-                    <div class="text-xl bg-blue-400 rounded-b-2xl mt-auto"><?= $product->price ?>&nbsp;&euro;</div>
+                    <div class="text-xl bg-blue-400 rounded-b-2xl mt-auto"><?= number_format($product->price, 2) ?>&nbsp;&euro;</div>
                 </div>
         </div>
     <?php } ?>
