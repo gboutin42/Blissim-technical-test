@@ -1,10 +1,10 @@
 <?php
 
-$DB_NAME		= "blissim_test_technique";
+$DB_NAME		= "my_db_name";
 $DB_DSN_LIGHT	= "mysql:host=localhost:3306";
 $DB_DSN			= $DB_DSN_LIGHT . ";dbname=" . $DB_NAME;
 $DB_USER		= "root";
-$DB_PWD			= "Psyko987666!";
+$DB_PWD			= "my_db_password";
 
 $DB_CREATE		= "CREATE DATABASE ";
 $DB_DROP		= "DROP DATABASE ";
