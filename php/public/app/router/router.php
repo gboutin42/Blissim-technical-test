@@ -26,7 +26,7 @@ $router->map('POST', '/add-comment-product-[i:productId]', function ($productId)
 	return $comment->addComment($productId);
 });
 
-$router->map('POST', '/update-comment-product-[i:commentId]', function ($commentId) {
+$router->map('POST', '/update-comment-[i:commentId]', function ($commentId) {
 	$comment = new CommentsController();
 	return $comment->updateComment($commentId);
 });
