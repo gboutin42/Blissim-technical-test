@@ -10,11 +10,22 @@ And finally, at the end, they are two queries:
   - the 2nd for get all names and quantities of the products sales on the last seven days
 
 # PHP Part
-Edit the file config/database.php and set the following variable:
+Edit the file php/config/database.php and set the following variable:
 ```
 $DB_NAME      = "your_database_name";
 $DB_DSN_LIGHT = "mysql:host=hostname:port_number";
 $DB_DSN       = $DB_DSN_LIGHT . ";dbname=" . $DB_NAME;
 $DB_USER      = "user_name";
 $DB_PWD       = "password";
+```
+Launch your server mysql with the same data of the file php/config/database.php<br>
+Then move in the php directory. `cd php`<br>
+Launch your server php, or the internal php server like this: 
+```
+php -S hostname:port_number -t public
+ex: php -S localhost:8080 -t public
+```
+And go on your browser at the following address for install the Database for the app
+```
+http://hostname:port_number/install
 ```
