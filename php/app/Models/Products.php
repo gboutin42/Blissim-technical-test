@@ -24,11 +24,13 @@ class Products
 	public static function getProductById($url, $id)
 	{
 		$products = self::getProductsByApi($url);
-		foreach ($products as $product)
-		{
-			if ($product->id == $id)
+		if ($products) {
+			foreach ($products as $product)
 			{
-				return $product;
+				if ($product->id == $id)
+				{
+					return $product;
+				}
 			}
 		}
 		return "Product not found.";
