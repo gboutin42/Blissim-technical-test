@@ -39,9 +39,9 @@ class CommentsController
 				$this->comment = htmlspecialchars($_POST["comment"]);
 
 				$comment = new Comments();
-				$comment->updateComment($idComment, $this->comment);
+				echo json_encode($comment->updateComment($idComment, $this->comment));
 			}
-			catch (ErrorException $e) {
+			catch (\ErrorException $e) {
 				die("An error is occured : " . $e->getMessage());
 			}
 		}
@@ -50,12 +50,11 @@ class CommentsController
 	public function deleteComment($idComment)
 	{
 		try {
-			$this->comment = htmlspecialchars($_POST["comment"]);
-
 			$comment = new Comments();
-			$comment->deleteComment($idComment);
+			echo json_encode($comment->deleteComment($idComment));
+
 		}
-		catch (ErrorException $e) {
+		catch (\ErrorException $e) {
 			die("An error is occured : " . $e->getMessage());
 		}
 	}
@@ -65,7 +64,7 @@ class CommentsController
 		try {
 			$comment = new Comments();
 			echo json_encode($comment->getComments($idProduct));
-		} catch (ErrorException $e) {
+		} catch (\ErrorException $e) {
 			die("An error is occured : " . $e->getMessage());
 		}
 	}
