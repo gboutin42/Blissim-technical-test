@@ -1,4 +1,4 @@
-<html lang="en">
+<html lang="fr">
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,7 +12,7 @@
 	<div class="flex flex-col justify-between m-52">
 		<div class="bg-gradient-to-r from-black via-gray-500 to-black rounded-xl text-center text-white p-6">
 			<div class="text-6xl">404 &middot; Page Not Found</div>
-			<div class="text-xl">Vous allez être redirigé vers la page d'acceuil&nbsp;&nbsp;;)</div>
+			<div class="text-xl">Vous allez être redirigé vers la page d'accueil&nbsp;&nbsp;;)</div>
 		</div>
 		<div>
 			<img src="resources/img/404.png" alt="404" class="w-48 mx-auto my-6">

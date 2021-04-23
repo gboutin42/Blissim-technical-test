@@ -6,4 +6,7 @@
 
 <script src="resources/js/global.js"></script>
 <script src="resources/js/products.js"></script>
-<script src="resources/js/comments.js"></script>
+<?php if ($_SERVER['REQUEST_URI'] != '/products') { ?>
+    <script src="resources/js/comments.js"></script>
+<?php } ?>
+
