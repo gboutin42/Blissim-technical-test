@@ -40,23 +40,23 @@ class Comments
 		}
 	}
 
-	public function deleteComment($idComment)
-	{
-		try {
-			$query = 'DELETE FROM `comments` WHERE id_comment=?';
-			$request = $this->db->pdo->prepare($query);
-			return $request->execute(array($idComment));
-		} catch (\PDOException $e) {
-			die("An error is occured : " . $e->getMessage());
-		}
-	}
-
 	public function updateComment($idComment, $comment)
 	{
 		try {
 			$query = 'UPDATE `comments` SET `comment`=? WHERE id_comment=?';
 			$request = $this->db->pdo->prepare($query);
 			return $request->execute(array($comment, $idComment));
+		} catch (\PDOException $e) {
+			die("An error is occured : " . $e->getMessage());
+		}
+	}
+
+	public function deleteComment($idComment)
+	{
+		try {
+			$query = 'DELETE FROM `comments` WHERE id_comment=?';
+			$request = $this->db->pdo->prepare($query);
+			return $request->execute(array($idComment));
 		} catch (\PDOException $e) {
 			die("An error is occured : " . $e->getMessage());
 		}
