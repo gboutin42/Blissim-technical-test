@@ -27,7 +27,7 @@ class ProductsController
     public function getProductByid($id)
     {
         $product = Products::getProductById('https://fakestoreapi.com/products', $id);
-            $product = $product;
-            require_once("../app/Views/Products/showProduct.php");
+        $product = $product;
+        require_once("../app/Views/Products/showProduct.php");
     }
 }
