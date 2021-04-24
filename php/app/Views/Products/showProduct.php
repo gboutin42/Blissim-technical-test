@@ -20,7 +20,7 @@
 		</div>
 	</div>
 <?php } else {?>
-	<div class="flex flex-col justify-around h-full">
+	<div>
 		<div class="text-center text-3xl text-blue-600 m-auto">
 			<?= $product ?>
 		</div>
