@@ -7,13 +7,14 @@ class Db
     private $variableDb;
     public $pdo;
     
-    public function __construct()
+    public function __construct($isInstalled = false)
     {
         $this->variableDb = dirname(__DIR__) . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'config' . DIRECTORY_SEPARATOR . 'database.php';
         require $this->variableDb;
 
         try {
-            $this->pdo = new \PDO($DB_DSN_LIGHT, $DB_USER, $DB_PWD);
+            $db_dsn = $isInstalled ? $DB_DSN : $DB_DSN_LIGHT;
+            $this->pdo = new \PDO($db_dsn, $DB_USER, $DB_PWD);
             $this->pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
         }
         catch (\PDOException $error) {
@@ -47,19 +48,10 @@ class Db
         try {
             $pdo = new \PDO($DB_DSN, $DB_USER, $DB_PWD);
             $pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
-
-            // $sql = $DB_TABLE_USERS;
-            // $pdo->exec($sql);
-            // echo "Table Users CREATED successfully.<br/>";
-
-            $sql = $DB_TABLE_PRODUCTS;
-            $pdo->exec($sql);
-            echo "Table Products CREATED successfully.<br/>";
             
             $sql = $DB_TABLE_COMMENTS;
             $pdo->exec($sql);
             echo "Table Comments CREATED successfully.<br/>";
-            
         }
         catch (\PDOException $error) {
             die("ERROR CREATING TABLES: " . $error->getMessage() . "Aborting process");

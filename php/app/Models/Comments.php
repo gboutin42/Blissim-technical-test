@@ -10,7 +10,7 @@ class Comments
 
 	public function __construct()
 	{
-		$this->db = new Db();
+		$this->db = new Db(true);
 	}
 
 	public function addComment($idProduct, $name, $comment)
