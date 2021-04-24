@@ -113,18 +113,15 @@ function updateComment() {
 			$.ajax({
 				url: "/" + this.id,
 				type: 'POST',
-				data: {
-					comment: comment
-				},
+				data: { comment: comment },
 				async: true,
 			}).done(function(data){
-				if (data == true) {
-					$('#get-comment-' + id).addClass('hidden')
+				if (data == "true") {
+					$('#update-comment-' + id).addClass('hidden')
 				}
 			}).fail(function(data, err) {
 				console.log("Une erreur est survenue : ", err)
 			})
-
 		})
 	})
 }

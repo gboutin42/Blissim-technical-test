@@ -13,7 +13,7 @@ class Db
         require $this->variableDb;
 
         try {
-            $this->pdo = new \PDO($DB_DSN, $DB_USER, $DB_PWD);
+            $this->pdo = new \PDO($DB_DSN_LIGHT, $DB_USER, $DB_PWD);
             $this->pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
         }
         catch (\PDOException $error) {
