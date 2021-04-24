@@ -31,8 +31,9 @@ class Db
             $pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
 
             $sql = $DB_DROP . " IF EXISTS " . $DB_NAME;
-            $pdo->exec($sql);
-            echo "Database DROPED successfully<br/>";
+            if ($pdo->exec($sql)) {
+                echo "Database DROPED successfully<br/>";
+            }
             
             $sql = $DB_CREATE . " IF NOT EXISTS " . $DB_NAME;
             $pdo->exec($sql);
