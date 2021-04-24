@@ -20,7 +20,11 @@ $DB_PWD       = "password";
 ```
 Launch your server mysql with the same data of the file php/config/database.php<br>
 Then move in the php directory. `cd php`<br>
-Launch your server php, or the internal php server like this: 
+Launch the following command to install the router:
+```
+composer install
+```
+Then launch your server php, or the internal php server like this, link on the public directory: 
 ```
 php -S hostname:port_number -t public
 ex: php -S localhost:8080 -t public
@@ -28,4 +32,5 @@ ex: php -S localhost:8080 -t public
 And go on your browser at the following address for install the Database for the app
 ```
 http://hostname:port_number/install
+ex: http://localhost:8080/install
 ```
